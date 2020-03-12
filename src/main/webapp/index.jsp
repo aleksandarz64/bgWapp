@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello my World!</h2>
+<h2>Hello my AWS World!</h2>
 </body>
 </html>
