@@ -18,10 +18,13 @@ pipeline {
                   git "${GIT_URL}" 
             }
         }
-        stage('Mvn compile') {
+        stage('Mvn clean') {
             steps {
-              echo 'MAVEN compile..'
-              sh 'cd '
+              echo 'MAVEN clean..'
+              sh 'cd /var/lib/jenkins/workspace/${APP_NAME}'
+              sh 'pwd'
+              sh 'mvn clean'
+
             }
         }
         stage('Deploy') {
