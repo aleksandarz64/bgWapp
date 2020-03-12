@@ -32,7 +32,7 @@ pipeline {
               sh 'MAVEN Compile..'
               sh 'cd /var/lib/jenkins/workspace/${APP_NAME}'
               withMaven(maven: 'apache-maven-3.8.2') {
-                  bat 'mvn compile'
+                  sh 'mvn compile'
               }
             }
         }
