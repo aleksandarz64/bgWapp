@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Git checkout code'){
             steps {
-                  git '${GIT_URL}' 
+                  git "${GIT_URL}" 
             }
         }
         stage('Mvn compile') {
