@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Git checkout code'){
             steps {
-                  git 'https://github.com/aleksandarz64/bgWapp.git' 
+                  git '${GIT_URL}' 
             }
         }
         stage('Mvn compile') {
@@ -24,7 +24,7 @@ pipeline {
               sh 'cd '
             }
         }
-        stage('Compile') {
+        stage('Deploy') {
             steps {
               sh 'echo Deploying....'
             }
